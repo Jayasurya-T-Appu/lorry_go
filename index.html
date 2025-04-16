@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link rel="stylesheet" href="input.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+
+  </head>
+
+  <body>
+    <div class="w-full">
+      <div class="w-full max-w-2xl mx-auto">
+        <nav
+          class="fixed top-[1rem] left-1/2 -translate-x-1/2 w-full md:w-[45rem] z-50"
+        >
+          <div
+            class="bg-none md:bg-[#E3E8EE] rounded-[32px] p-4 flex items-center justify-between relative"
+          >
+            <img src="./assets/logo.png" alt="Logo" class="w-[7rem] h-full" />
+
+            <!-- Hamburger Menu Button (Visible on mobile) -->
+            <button
+              id="menu-toggle"
+              class="md:hidden text-black text-2xl transition-transform duration-300"
+            >
+              ☰
+            </button>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-4">
+              <p class="text-black font-medium capitalize">home</p>
+              <p class="text-black font-medium capitalize">about</p>
+              <p class="text-black font-medium capitalize">services</p>
+            </div>
+
+            <button
+              class="relative hidden md:inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter text-white bg-black rounded-full group cursor-pointer"
+            >
+              <span
+                class="absolute w-0 h-0 transition-all duration-500 ease-out bg-[#004890] rounded-full group-hover:w-56 group-hover:h-56"
+              ></span>
+
+              <span class="relative text-base font-semibold">contact</span>
+            </button>
+
+            <!-- Mobile Menu (Hidden by default) -->
+            <div
+              id="mobile-menu"
+              class="absolute top-full left-0 w-full bg-[#E3E8EE] rounded-[12px] shadow-md p-4 flex flex-col items-center space-y-3 opacity-0 scale-95 transform transition-all duration-300 origin-top hidden"
+            >
+              <p
+                class="text-black font-medium capitalize cursor-pointer hover:text-gray-600 transition-all duration-300"
+              >
+                home
+              </p>
+              <p
+                class="text-black font-medium capitalize cursor-pointer hover:text-gray-600 transition-all duration-300"
+              >
+                about
+              </p>
+              <p
+                class="text-black font-medium capitalize cursor-pointer hover:text-gray-600 transition-all duration-300"
+              >
+                services
+              </p>
+              <button
+                class="bg-black rounded-[12px] px-[18px] py-[7px] text-white hover:bg-gray-800 transition-all duration-300"
+              >
+                contact
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="pt-[8rem] md:pt-[11rem] flex flex-col gap-20">
+        <section id="hero" class="flex flex-col gap-10 px-8 lg:px-16">
+          <div
+            class="flex flex-col gap-2 md:flex-row items-start md:items-end justify-between w-full"
+          >
+            <div>
+              <h2
+                class="text-black font-medium text-[4vw] md:text-[2vw] leading-none"
+              >
+                Welcome to
+              </h2>
+              <h1
+                class="font-poppins text-[#004890] font-black leading-none text-[19vw] md:text-[10vw] capitalize"
+              >
+                lorryGo
+              </h1>
+            </div>
+            <div>
+              <p class="font-medium text-base">
+                Reliable Trucking Solutions for Your Transport Needs
+              </p>
+              <p class="font-medium text-base">
+                Efficient, Safe, and Timely Freight Transportation Across the
+                UAE and GCC
+              </p>
+            </div>
+          </div>
+          <div
+            class="overflow-hidden rounded-[24px] w-full h-[55vh] md:h-[75vh]"
+          >
+            <img
+              src="./assets/heroimage.jpg"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </section>
+        <section id="about" class="px-8 lg:px-16">
+          <div class="flex flex-col items-center justify-center gap-5 pb-10">
+            <p class="capitalize text-[32px] font-black text-center">
+              about us
+            </p>
+            <div class="flex flex-col items-start justify-center gap-3 pb-10">
+              <p
+                class="text-base md:text-[24px] font-medium reveal-type"
+                data-bg-color="#cccccc"
+                data-fg-color="#000"
+              >
+                At LorryGo Transport, we are committed to providing efficient
+                and safe transportation solutions for businesses across UAE and
+                beyond. Founded in 2024, our goal is to deliver high-quality
+                services that ensure goods are transported quickly and securely.
+                Our fleet of modern trucks and experienced drivers are ready to
+                meet the diverse needs of our clients, whether it’s a local
+                delivery or long-haul transport
+              </p>
+
+              <section>
+                <p
+                  class="reveal-type text-base md:text-[24px] font-medium"
+                  data-bg-color="#cccccc"
+                  data-fg-color="#000"
+                >
+                  Our mission is to be the leading provider of truck
+                  transportation services in GCC, offering reliable and
+                  cost-effective solutions that exceed customer expectations.”
+                </p>
+              </section>
+              <section>
+                <p
+                  class="reveal-type text-base md:text-[24px] font-medium"
+                  data-bg-color="#cccccc"
+                  data-fg-color="#000"
+                >
+                  To continuously improve our services and expand our fleet to
+                  support the growing logistics needs of businesses in GCC.
+                </p>
+              </section>
+            </div>
+          </div>
+          <!-- Video Reveal Section -->
+        </section>
+        <section>
+          <div class="sticky-wrapper">
+            <div class="sticky-video">
+              <div class="video-container">
+                <video autoplay muted class="video">
+                  <source src="./assets/lorryvideo.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="w-full px-8 lg:px-16">
+          <div class="relative">
+            <h1
+              class="text-black/25 text-[18vw] md:text-[20vw] font-black text-center uppercase"
+            >
+              lorrygo
+            </h1>
+            <div
+              class="absolute left-1/2 -translate-x-1/2 top-[5rem] md:top-[9rem] lg:top-[17rem] -translate-x-1/2 left-1/2"
+            >
+              <img
+                src="./assets/lorry.png"
+                alt="lorry"
+                srcset=""
+                class="w-[10rem] h-[8rem] md:w-[50rem] md:h-[14rem] lg:w-[55rem] lg:h-[60vh]"
+              />
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-2 md:flex-row justify-between items-center pt-[10rem] md:pt-[14rem] lg:pt-[20rem]"
+          >
+            <div class="flex items-center">
+              <!-- <div
+                class="bg-[#2B2A2A] flex flex-col items-center justify-center rounded-full shrink-0 size-[80px] lg:size-[120px]"
+              >
+                <p
+                  class="text-[20px] md:-[28px] lg:text-[32px] text-white font-semibold"
+                >
+                  25
+                </p>
+                <p
+                  class="text-[10px] md:text-[14px] text-white font-medium text-center capitalize"
+                >
+                  years of experience
+                </p>
+              </div> -->
+              <div
+                class="bg-[#2B2A2A] flex flex-col items-center justify-center rounded-full shrink-0 size-[80px] lg:size-[120px]"
+              >
+                <p
+                  class="text-[20px] md:-[28px] lg:text-[32px] text-white font-semibold"
+                >
+                  3k
+                </p>
+                <p
+                  class="text-[10px] md:text-[14px] text-white font-medium text-center capitalize"
+                >
+                  Delivery for month
+                </p>
+              </div>
+              <div
+                class="bg-[#2B2A2A] flex flex-col items-center justify-center rounded-full shrink-0 size-[80px] lg:size-[120px]"
+              >
+                <p
+                  class="text-[20px] md:-[28px] lg:text-[32px] text-white font-semibold"
+                >
+                  24/7
+                </p>
+                <p
+                  class="text-[10px] md:text-[14px] text-white text-center font-medium capitalize"
+                >
+                  Customer support
+                </p>
+              </div>
+            </div>
+            <p
+              class="text-[24px] text-[28px] lg:text-[36px] font-medium capitalize text-center md:text-left w-full md:w-[22rem]"
+            >
+              solve delivery challenges with seamless operations
+            </p>
+          </div>
+        </section>
+        <section>
+          <div
+            class="bg-[#004890] flex items-center justify-between overflow-hidden"
+          >
+            <div class="marquee-text">
+              <div class="marquee-text-track">
+                <p>fast <span>.</span></p>
+                <p>efficient <span>.</span></p>
+                <p>secure <span>.</span></p>
+                <p>reliable <span>.</span></p>
+                <p>innovative <span>.</span></p>
+                <p aria-hidden="true">fast <span>.</span></p>
+                <p aria-hidden="true">efficient <span>.</span></p>
+                <p aria-hidden="true">secure <span>.</span></p>
+                <p aria-hidden="true">reliable <span>.</span></p>
+                <p aria-hidden="true">innovative <span>.</span></p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="services" class="section panal section_4 white-bg">
+          <div class="white-bg">
+            <div class="h-full px-3 sm:px-20 lg:px-16">
+              <div
+                class="section_header flex items-center justify-center text-center sm:text-left pb-5 md:pb-10 text-[32px] font-semibold sm:text-6xl"
+              >
+                <h2
+                  class="flex flex-col text-[24px] md:text-[32px] font-semibold"
+                >
+                  Services
+                </h2>
+              </div>
+              <div class="project_gallery flex">
+                <div class="left_pro w-1/2 hidden sm:block">
+                  <div class="desktopContent m-auto w-4/5">
+                    <div
+                      class="desktopContentSection min-h-screen flex flex-col justify-center"
+                    >
+                      <div class="project_head sm:mt-0">
+                        <h1 class="md:text-[2vw] text-xl font-bold mb-5">
+                          Local Transport:
+                        </h1>
+                      </div>
+                      <div
+                        class="project_data inline text-xl md:text-[2vw] my-8 md:leading-[133%] leading-[150%]"
+                      >
+                        <p class="">
+                          We offer same-day and next-day delivery for local
+                          businesses, ensuring goods are transported efficiently
+                          within UAE.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="desktopContentSection min-h-screen flex flex-col justify-center"
+                    >
+                      <div class="project_head mt-5 sm:mt-0">
+                        <h1 class="md:text-[2vw] text-xl font-bold mb-5">
+                          Long-Distance Trucking:
+                        </h1>
+                      </div>
+                      <div
+                        class="project_data inline text-xl md:text-[2vw] my-8 md:leading-[133%] leading-[150%]"
+                      >
+                        <p class="">
+                          We provide long-haul transport across the GCC with a
+                          focus on reliability and safety. Our experienced
+                          drivers ensure timely deliveries even over long
+                          distances.
+                        </p>
+                      </div>
+                      <!-- <div
+                          class="tag my-7 text-[#6f6f6f] sm:text-[1.16vw] tracking-[0.04375em] leading-[156%]"
+                        >
+                          <span>web, mobile, product</span>
+                        </div> -->
+                    </div>
+                    <div
+                      class="desktopContentSection min-h-screen flex flex-col justify-center"
+                    >
+                      <div class="project_head mt-5 sm:mt-0">
+                        <h1 class="md:text-[2vw] text-xl font-bold mb-5">
+                          Oversized and Specialized Cargo Transport:
+                        </h1>
+                      </div>
+                      <div
+                        class="project_data inline text-xl md:text-[2vw] my-8 md:leading-[133%] leading-[150%]"
+                      >
+                        <p class="">
+                          We specialize in transporting oversized and heavy
+                          loads that require specialized trucks. Our
+                          fleet is equipped to handle large equipment,
+                          construction materials, and more.
+                        </p>
+                      </div>
+                      <!-- <div
+                          class="tag my-7 text-[#6f6f6f] sm:text-[1.16vw] tracking-[0.04375em] leading-[156%]"
+                        >
+                          <span>web, mobile, product</span>
+                        </div> -->
+                    </div>
+                    <div
+                      class="desktopContentSection min-h-screen flex flex-col justify-center"
+                    >
+                      <div class="project_head mt-5 sm:mt-0">
+                        <h1 class="md:text-[2vw] text-xl font-bold mb-5">
+                          Customized Logistics Solutions:
+                        </h1>
+                      </div>
+                      <div
+                        class="project_data inline text-xl md:text-[2vw] my-8 md:leading-[133%] leading-[150%]"
+                      >
+                        <p class="">
+                          Tailored transportation services to meet the specific
+                          requirements of your business, including specialized
+                          packaging, route planning, and timed deliveries.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="right_pro sm:h-screen sm:w-1/2 flex flex-col sm:justify-center h-auto w-full items-center sm:items-start"
+                >
+                  <!-- mobile content -->
+                  <div class="mobileContent block sm:hidden w-[80vw]">
+                    <div
+                      class="mobilePhoto overflow-hidden w-[80vw] h-[80vw] mt-20 rounded-2xl"
+                    >
+                      <img
+                        class="w-full h-full object-cover"
+                        src="./assets/localtransport2.jpeg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="project_head mt-5 sm:mt-0">
+                      <h1 class="md:text-[1.5vw] text-xl font-bold mb-5">
+                        Local Transport:
+                      </h1>
+                    </div>
+                    <div
+                      class="project_data inline text-xl md:text-[2.58vw] my-8 md:leading-[133%] leading-[150%]"
+                    >
+                      <p class="">
+                        We offer same-day and next-day delivery for local
+                        businesses, ensuring goods are transported efficiently
+                        within UAE.
+                      </p>
+                    </div>
+
+                    <div
+                      class="mobilePhoto overflow-hidden w-[80vw] h-[80vw] mt-20 rounded-2xl"
+                    >
+                      <img
+                        class="w-full h-full object-cover"
+                        src="./assets/long trucking.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="project_head mt-5 sm:mt-0">
+                      <h1 class="md:text-[1.5vw] text-xl font-bold mb-5">
+                        Long-Distance Trucking:
+                      </h1>
+                    </div>
+                    <div
+                      class="project_data inline text-xl md:text-[2.58vw] my-8 md:leading-[133%] leading-[150%]"
+                    >
+                      <p class="">
+                        We provide long-haul transport across the GCC with a
+                        focus on reliability and safety. Our experienced drivers
+                        ensure timely deliveries even over long distances.
+                      </p>
+                    </div>
+
+                    <div
+                      class="mobilePhoto overflow-hidden w-[80vw] h-[80vw] mt-20 rounded-2xl"
+                    >
+                      <img
+                        class="w-full h-full object-cover"
+                        src="./assets/localtransport.jpeg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="project_head mt-5 sm:mt-0">
+                      <h1 class="md:text-[1.5vw] text-xl font-bold mb-5">
+                        Oversized and Specialized Cargo Transport:
+                      </h1>
+                    </div>
+                    <div
+                      class="project_data inline text-xl md:text-[2.58vw] my-8 md:leading-[133%] leading-[150%]"
+                    >
+                      <p class="">
+                        We specialize in transporting oversized and heavy loads
+                        that require specialized trucks. Our fleet is
+                        equipped to handle large equipment, construction
+                        materials, and more.
+                      </p>
+                    </div>
+
+                    <div
+                      class="mobilePhoto overflow-hidden w-[80vw] h-[80vw] mt-20 rounded-2xl"
+                    >
+                      <img
+                        class="w-full h-full object-cover"
+                        src="./assets/logistic solution.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="project_head mt-5 sm:mt-0">
+                      <h1 class="md:text-[1.5vw] text-xl font-bold mb-5">
+                        Customized Logistics Solutions:
+                      </h1>
+                    </div>
+                    <div
+                      class="project_data inline text-xl md:text-[2.58vw] my-8 md:leading-[133%] leading-[150%]"
+                    >
+                      <p class="">
+                        Tailored transportation services to meet the specific
+                        requirements of your business, including specialized
+                        packaging, route planning, and timed deliveries.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- desktop content -->
+
+                  <div
+                    class="desktopPhotos w-[25vw] h-[40vw] m-auto rounded-2xl relative overflow-hidden hidden sm:block"
+                  >
+                    <div
+                      class="desktopPhoto overflow-hidden absolute w-full h-full"
+                    >
+                      <img
+                        class="w-full h-full object-cover"
+                        src="./assets/localtransport2.jpeg"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="desktopPhoto overflow-hidden absolute w-full h-full"
+                    >
+                      <img
+                        class="w-full h-full object-cover"
+                        src="./assets/long trucking.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="desktopPhoto overflow-hidden absolute w-full h-full"
+                    >
+                      <img
+                        class="w-full h-full object-cover"
+                        src="./assets/localtransport.jpeg"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="desktopPhoto overflow-hidden absolute w-full h-full"
+                    >
+                      <img
+                        class="w-full h-full object-cover"
+                        src="./assets/logistic solution.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="w-full px-8 lg:px-16">
+          <div class="flex flex-col items-center justify-center gap-16 w-full">
+            <p class="text-[32px] font-semibold capitalize">what do we do</p>
+            <div
+              class="grid grid-col-1 lg:grid-cols-2 justify-between items-center gap-20 gap-y-14"
+            >
+              <div class="flex flex-col items-start gap-2">
+                <p class="text-[20px] md:text-[24px] font-semibold capitalize">
+                  Flatbed Trucks:
+                </p>
+                <div
+                  class="rounded-[24px] w-[100%] h-[18rem] lg:w-[25em] lg:h-[20em] 2xl:w-[40em] 2xl:h-[30em] overflow-hidden"
+                >
+                  <img
+                    src="/assets/flatbedtruck.jpeg"
+                    alt=""
+                    srcset=""
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <p
+                  class="w-full lg:w-[25rem] 2xl:w-[40rem] text-base md:text-[20px]"
+                >
+                  Our flatbed trucks are perfect for carrying large or bulky
+                  items, such as construction materials, containers, machinery,
+                  or industrial equipment
+                </p>
+              </div>
+              <div class="flex flex-col items-start gap-2">
+                <p class="text-[20px] md:text-[24px] font-semibold capitalize">
+                  Lowbed Trucks:
+                </p>
+                <div
+                  class="rounded-[24px] w-[100%] h-[18rem] lg:w-[25em] lg:h-[20em] 2xl:w-[40em] 2xl:h-[30em] overflow-hidden"
+                >
+                  <img
+                    src="/assets/lowbed.jpeg"
+                    alt=""
+                    srcset=""
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <p
+                  class="w-full lg:w-[25rem] 2xl:w-[40rem] text-base md:text-[20px]"
+                >
+                  Our Lowbed trucks are perfect for carrying Oversized or
+                  weighted cargos, such as, vessels, heavy machineries, or
+                  special equipment
+                </p>
+              </div>
+              <div class="flex flex-col items-start gap-2">
+                <p class="text-[20px] md:text-[24px] font-semibold capitalize">
+                  Long Trailers:
+                </p>
+                <div
+                  class="rounded-[24px] w-[100%] h-[18rem] lg:w-[25em] lg:h-[20em] 2xl:w-[40em] 2xl:h-[30em] overflow-hidden"
+                >
+                  <img
+                    src="/assets/longtrailer.jpeg"
+                    alt=""
+                    srcset=""
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <p
+                  class="w-full lg:w-[25rem] 2xl:w-[40rem] text-base md:text-[20px]"
+                >
+                  Long trailers are perfect for carrying Over length cargos upto
+                  35meters, such as, Long pipes, crane girders etc
+                </p>
+              </div>
+              <div class="flex flex-col items-start gap-2">
+                <p class="text-[20px] md:text-[24px] font-semibold capitalize">
+                  Box Trucks:
+                </p>
+                <div
+                  class="rounded-[24px] w-[100%] h-[18rem] lg:w-[25em] lg:h-[20em] 2xl:w-[40em] 2xl:h-[30em] overflow-hidden"
+                >
+                  <img
+                    src="/assets/boxtrucks (1).jpg"
+                    alt=""
+                    srcset=""
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <p
+                  class="w-full lg:w-[25rem] 2xl:w-[40rem] text-base md:text-[20px]"
+                >
+                  For general cargo, our box trucks offer secure and efficient
+                  transport, providing a protected environment for goods.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <section class="bg-white">
+          <div
+            class="mx-auto max-w-screen-2xl px-4 py-4 sm:px-6 lg:px-16 lg:py-16"
+          >
+            <h2
+              class="text-center text-[24px] font-bold tracking-tight text-gray-900 md:text-[32px]"
+            >
+              Testomonial
+            </h2>
+            <div class="mt-8">
+              <div id="keen-slider" class="keen-slider">
+                <div
+                  class="keen-slider__slide opacity-40 transition-opacity duration-500"
+                >
+                  <blockquote
+                    class="rounded-lg bg-[#e3e8ee] p-6 shadow-xs sm:p-8"
+                  >
+                    <div class="flex items-center gap-4">
+                      <div>
+                        <p class="mt-0.5 text-lg font-medium text-gray-900">
+                          Paul Starr
+                        </p>
+                      </div>
+                    </div>
+                    <p class="mt-4 text-gray-700">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Culpa sit rerum incidunt, a consequuntur recusandae ab
+                      saepe illo est quia obcaecati neque quibusdam eius
+                      accusamus error officiis atque voluptates magnam!
+                    </p>
+                  </blockquote>
+                </div>
+                <div
+                  class="keen-slider__slide opacity-40 transition-opacity duration-500"
+                >
+                  <blockquote
+                    class="rounded-lg bg-[#e3e8ee] p-6 shadow-xs sm:p-8"
+                  >
+                    <div class="flex items-center gap-4">
+                      <div>
+                        <p class="mt-0.5 text-lg font-medium text-gray-900">
+                          Paul Starr
+                        </p>
+                      </div>
+                    </div>
+                    <p class="mt-4 text-gray-700">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Culpa sit rerum incidunt, a consequuntur recusandae ab
+                      saepe illo est quia obcaecati neque quibusdam eius
+                      accusamus error officiis atque voluptates magnam!
+                    </p>
+                  </blockquote>
+                </div>
+                <div
+                  class="keen-slider__slide opacity-40 transition-opacity duration-500"
+                >
+                  <blockquote
+                    class="rounded-lg bg-[#e3e8ee] p-6 shadow-xs sm:p-8"
+                  >
+                    <div class="flex items-center gap-4">
+                      <div>
+                        <p class="mt-0.5 text-lg font-medium text-gray-900">
+                          Paul Starr
+                        </p>
+                      </div>
+                    </div>
+                    <p class="mt-4 text-gray-700">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Culpa sit rerum incidunt, a consequuntur recusandae ab
+                      saepe illo est quia obcaecati neque quibusdam eius
+                      accusamus error officiis atque voluptates magnam!
+                    </p>
+                  </blockquote>
+                </div>
+
+                <div
+                  class="keen-slider__slide opacity-40 transition-opacity duration-500"
+                >
+                  <blockquote
+                    class="rounded-lg bg-[#e3e8ee] p-6 shadow-xs sm:p-8"
+                  >
+                    <div class="flex items-center gap-4">
+                      <div>
+                        <p class="mt-0.5 text-lg font-medium text-gray-900">
+                          Paul Starr
+                        </p>
+                      </div>
+                    </div>
+                    <p class="mt-4 text-gray-700">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Culpa sit rerum incidunt, a consequuntur recusandae ab
+                      saepe illo est quia obcaecati neque quibusdam eius
+                      accusamus error officiis atque voluptates magnam!
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="mt-6 flex items-center justify-center gap-4">
+                <button
+                  aria-label="Previous slide"
+                  id="keen-slider-previous"
+                  class="text-gray-600 transition-colors hover:text-gray-900 cursor-pointer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 19.5L8.25 12l7.5-7.5"
+                    />
+                  </svg>
+                </button>
+
+                <p class="w-16 text-center text-sm text-gray-700">
+                  <span id="keen-slider-active"></span>
+                  /
+                  <span id="keen-slider-count"></span>
+                </p>
+
+                <button
+                  aria-label="Next slide"
+                  id="keen-slider-next"
+                  class="text-gray-600 transition-colors hover:text-gray-900 cursor-pointer"
+                >
+                  <svg
+                    class="size-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 5l7 7-7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section> -->
+        <section id="contact" class="w-full px-8 lg:px-14">
+          <div
+            class="bg-[#E3E8EE] rounded-tl-[64px] rounded-br-[64px] px-10 py-8 lg:px-[10rem] lg:py-[5rem] xl:px-[15rem] xl:py-[5rem]"
+          >
+            <div class="flex flex-col gap-8">
+              <p
+                class="text-[6vw] md:text-[4vw] w-full lg:w-[40rem] font-semibold capitalize"
+              >
+                ready to ship your goods with us ?
+              </p>
+
+              <form class="form flex flex-col gap-5">
+                <div
+                  class="flex flex-col md:flex-row items-center justify-between gap-3 w-full"
+                >
+                  <div class="bg-white px-4 py-3 w-full">
+                    <input
+                      type="text"
+                      placeholder="Your Name"
+                      class="w-full xl:w-[15rem] outline-none text-sm"
+                    />
+                  </div>
+                  <div class="bg-white px-4 py-3 w-full">
+                    <input
+                      type="text"
+                      placeholder="Your Email"
+                      class="w-full xl:w-[15rem] outline-none text-sm"
+                    />
+                  </div>
+                  <div class="bg-white px-4 py-3 w-full">
+                    <input
+                      type="number"
+                      placeholder="Your Phone"
+                      class="w-full xl:w-[15rem] outline-none text-sm"
+                    />
+                  </div>
+                </div>
+                <div class="w-full">
+                  <div class="bg-white w-full px-4 py-3">
+                    <textarea
+                      placeholder="Your Message"
+                      class="w-full outline-none text-sm"
+                      name="message"
+                      id="message"
+                      cols="10"
+                      rows="5"
+                    ></textarea>
+                  </div>
+                </div>
+              </form>
+              <button
+                class="submit-btn relative w-40 inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter text-white bg-black rounded-full group cursor-pointer"
+              >
+                <span
+                  class="absolute w-0 h-0 transition-all duration-500 ease-out bg-[#004890] rounded-full group-hover:w-56 group-hover:h-56"
+                ></span>
+
+                <span class="relative text-base font-semibold">Submit</span>
+              </button>
+              <div
+                class="flex flex-col md:flex-row items-start justify-between gap-3"
+              >
+                <div>
+                  <p class="text-base xl:text-xl font-semibold capitalize">
+                    email me
+                  </p>
+                  <p class="text-black/50 text-sm xl:text-base">
+                    info@lorrygopvt.com
+                  </p>
+                </div>
+                <div>
+                  <p class="text-base xl:text-xl font-semibold capitalize">
+                    phone
+                  </p>
+                  <p class="text-black/50 text-sm xl:text-base">
+                    +971502437069
+                  </p>
+                </div>
+                <div>
+                  <p class="text-base xl:text-xl font-semibold capitalize">
+                    telephone
+                  </p>
+                  <p class="text-black/50 text-sm xl:text-base">+97165758810</p>
+                </div>
+                <div>
+                  <p class="text-base xl:text-xl font-semibold capitalize">
+                    address
+                  </p>
+                  <p
+                    class="text-black/50 w-full xl:w-[15rem] text-sm xl:text-base"
+                  >
+                    Commercial Bank of Dubai-Building, Office No: M-02-272, Al
+                    khabeesi Street, Dubai, UAE
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer
+          class="bg-[#004890] h-[50vh] md:h-[60vh] lg:h-[58vh] relative overflow-hidden"
+        >
+          <div class="pt-[5rem] px-6 md:px-14 w-full">
+            <div class="flex justify-between items-center pb-[3rem]">
+              <img
+                src="./assets/logo2.png"
+                alt=""
+                srcset=""
+                class="w-[10rem] h-full"
+              />
+              <div class="flex items-center gap-4">
+                <i class="ph ph-facebook-logo text-[36px] text-white"></i>
+                <i class="ph ph-instagram-logo text-[36px] text-white"></i>
+              </div>
+            </div>
+            <hr class="text-white" />
+            <div>
+              <p class="text-sm md:text-[20px] text-white">
+                © Copyright 2025 - Lorrygo
+              </p>
+            </div>
+            <p
+              class="uppercase font-semibold text-white text-center text-[21vw] leading-none absolute left-1/2 -translate-x-1/2 -bottom-[2rem] md:-bottom-[4rem] lg:-bottom-[7rem]"
+            >
+              lorrygo
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="loading-screen">
+      <div class="loader">
+        <div class="loader-1 bar"></div>
+        <div class="loader-2 bar"></div>
+      </div>
+    </div>
+
+    <!-- <script src="./script.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".form");
+  const submitBtn = document.querySelector(".submit-btn");
+
+  if (form) {
+    // Set FormSubmit.co action
+    form.action = "https://formsubmit.co/info@lorrygopvt.com";
+    form.method = "POST";
+
+    // Honeypot field (spam protection)
+    const honeypotField = document.createElement("input");
+    honeypotField.type = "text";
+    honeypotField.name = "_honey";
+    honeypotField.style.display = "none";
+    form.appendChild(honeypotField);
+
+    // Disable captcha
+    const disableCaptcha = document.createElement("input");
+    disableCaptcha.type = "hidden";
+    disableCaptcha.name = "_captcha";
+    disableCaptcha.value = "false";
+    form.appendChild(disableCaptcha);
+
+    // Prevent redirection
+    const noRedirect = document.createElement("input");
+    noRedirect.type = "hidden";
+    noRedirect.name = "_redirect";
+    noRedirect.value = "false";
+    form.appendChild(noRedirect);
+  }
+
+  const nameInput = document.querySelector('input[placeholder="Your Name"]');
+  const emailInput = document.querySelector('input[placeholder="Your Email"]');
+  const phoneInput = document.querySelector('input[placeholder="Your Phone"]');
+  const messageTextarea = document.querySelector('textarea[placeholder="Your Message"]');
+
+  if (nameInput) nameInput.name = "name";
+  if (emailInput) emailInput.name = "email";
+  if (phoneInput) phoneInput.name = "phone";
+  if (messageTextarea) messageTextarea.name = "message";
+
+  function createErrorElement(message) {
+    const errorDiv = document.createElement("div");
+    errorDiv.className = "text-red-500 text-xs mt-1 ml-1";
+    errorDiv.textContent = message;
+    return errorDiv;
+  }
+
+  function clearError(element) {
+    if (!element) return;
+    const parent = element.parentElement;
+    const existingError = parent.querySelector(".text-red-500");
+    if (existingError) {
+      parent.removeChild(existingError);
+    }
+    element.classList.remove("border-red-500");
+  }
+
+  function showError(element, message) {
+    clearError(element);
+    const errorElement = createErrorElement(message);
+    element.parentElement.appendChild(errorElement);
+    element.classList.add("border-red-500");
+  }
+
+  function validateName() {
+    clearError(nameInput);
+    if (nameInput.value.trim() === "") {
+      showError(nameInput, "Name is required");
+      return false;
+    }
+    return true;
+  }
+
+  function validateEmail() {
+    clearError(emailInput);
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailInput.value.trim() === "") {
+      showError(emailInput, "Email is required");
+      return false;
+    } else if (!emailPattern.test(emailInput.value)) {
+      showError(emailInput, "Please enter a valid email address");
+      return false;
+    }
+    return true;
+  }
+
+  function validatePhone() {
+    clearError(phoneInput);
+    const phonePattern = /^\d{10,15}$/;
+    if (phoneInput.value.trim() === "") {
+      showError(phoneInput, "Phone number is required");
+      return false;
+    } else if (!phonePattern.test(phoneInput.value.replace(/\D/g, ""))) {
+      showError(phoneInput, "Please enter a valid phone number (10-15 digits)");
+      return false;
+    }
+    return true;
+  }
+
+  function showSubmissionStatus(message, isSuccess) {
+    let statusElement = document.querySelector(".form-status");
+    if (!statusElement) {
+      statusElement = document.createElement("div");
+      statusElement.className = "form-status mt-4 p-3 rounded";
+      form.appendChild(statusElement);
+    }
+
+    if (isSuccess) {
+      statusElement.className = "form-status mt-4 p-3 rounded bg-green-100 text-green-800";
+    } else {
+      statusElement.className = "form-status mt-4 p-3 rounded bg-red-100 text-red-800";
+    }
+
+    statusElement.textContent = message;
+
+    if (isSuccess) {
+      setTimeout(() => {
+        statusElement.textContent = "";
+        statusElement.className = "form-status mt-4 p-3 rounded hidden";
+      }, 5000);
+    }
+  }
+
+  if (nameInput) nameInput.addEventListener("input", validateName);
+  if (emailInput) emailInput.addEventListener("input", validateEmail);
+  if (phoneInput) phoneInput.addEventListener("input", validatePhone);
+
+  if (submitBtn && form) {
+    submitBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const isNameValid = validateName();
+      const isEmailValid = validateEmail();
+      const isPhoneValid = validatePhone();
+
+      if (isNameValid && isEmailValid && isPhoneValid) {
+        const formData = new FormData(form);
+
+        submitBtn.textContent = "Sending...";
+        submitBtn.disabled = true;
+
+        fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.text();
+          })
+          .then((data) => {
+            form.reset();
+            showSubmissionStatus("Thank you! Your message has been sent successfully.", true);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            showSubmissionStatus("There was an error sending your message. Please try again.", false);
+          })
+          .finally(() => {
+            submitBtn.textContent = "Submit";
+            submitBtn.disabled = false;
+          });
+      }
+    });
+  }
+});
+
+    </script>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", function () {
+        const isOpen = mobileMenu.classList.contains("hidden");
+
+        if (isOpen) {
+          mobileMenu.classList.remove("hidden");
+          setTimeout(() => {
+            mobileMenu.classList.remove("opacity-0", "scale-95");
+            mobileMenu.classList.add("opacity-100", "scale-100");
+          }, 10);
+          menuToggle.innerHTML = "✖"; // Change to close icon
+        } else {
+          mobileMenu.classList.remove("opacity-100", "scale-100");
+          mobileMenu.classList.add("opacity-0", "scale-95");
+          setTimeout(() => {
+            mobileMenu.classList.add("hidden");
+          }, 300);
+          menuToggle.innerHTML = "☰"; // Change back to hamburger icon
+        }
+      });
+    </script>
+    <script>
+      $(window).on("scroll", function () {
+        let scrollTop = $(window).scrollTop();
+        let section = $(".sticky-wrapper");
+        let video = $(".video");
+        let sectionTop = section.offset().top;
+        let sectionHeight = section.height();
+        let windowHeight = $(window).height();
+
+        let progress =
+          (scrollTop - sectionTop) / (sectionHeight - windowHeight);
+
+        // Clamp progress between 0 and 1 (0% to 100%)
+        progress = Math.min(Math.max(progress, 0), 1);
+
+        // Apply the reveal effect
+        let clipSize = progress * 100;
+        video.css("clip-path", `circle(${clipSize}% at center)`);
+      });
+    </script>
+    <script>
+      // Variables to track scroll position
+      let lastScrollTop = 0;
+      const navbar = document.querySelector("nav");
+      const sections = {
+        home: document.querySelector("#hero"),
+        about: document.querySelector("#about"),
+        services: document.querySelector("#services"), // The section with "Services" title
+        contact: document.querySelector("#contact"),
+      };
+
+      // Smooth scroll function
+      function scrollToSection(section) {
+        if (sections[section]) {
+          sections[section].scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      // Add click event listeners to nav items
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all navigation links
+        const navLinks = document.querySelectorAll(
+          "nav .font-medium, nav p, nav button"
+        );
+
+        // Add event listeners to each nav link
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const section = this.textContent.toLowerCase().trim();
+            scrollToSection(section);
+          });
+        });
+      });
+
+      // Handle scroll events to show/hide navbar
+      window.addEventListener("scroll", function () {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        // Determine scroll direction
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+          // Scrolling down - hide navbar
+          navbar.style.transform = "translateY(-200%)";
+          navbar.style.transition = "transform 0.3s ease-in-out";
+        } else {
+          // Scrolling up - show navbar
+          navbar.style.transform = "translateY(0)";
+          navbar.style.transition = "transform 0.3s ease-in-out";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For mobile or negative scrolling
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const lenis = new Lenis({
+          smooth: true,
+          lerp: 0.1, // Adjust for smoother effect
+          duration: 1.2, // Adjust scrolling duration
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function
+        });
+
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+      });
+    </script>
+    <script>
+      const details = gsap.utils.toArray(
+        ".desktopContentSection:not(:first-child)"
+      );
+      const photos = gsap.utils.toArray(".desktopPhoto:not(:first-child)");
+
+      gsap.set(photos, {
+        yPercent: 101,
+      });
+
+      const allPhotos = gsap.utils.toArray(".desktopPhoto");
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.utils.toArray(".mobilePhoto").forEach((container) => {
+        let image = container.querySelector(".mobilePhoto img");
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: container,
+            start: "top 120%",
+            toggleActions: "play none none reverse",
+          },
+        });
+
+        tl.set(container, { autoAlpha: 1 });
+        tl.from(container, {
+          duration: 3,
+          yPercent: 100,
+          skewX: 0.1,
+          scale: 1,
+          ease: "expo",
+        });
+        tl.from(
+          image,
+          {
+            duration: 3,
+            yPercent: -100,
+            skewX: 0.1,
+            scale: 1.5,
+            ease: "expo",
+          },
+          0
+        );
+      });
+
+      // create
+      let mm = gsap.matchMedia();
+
+      // add a media query. When it matches, the associated function will run
+      mm.add("(min-width: 640px)", () => {
+        // this setup code only runs when viewport is at least 600px wide
+        console.log("desktop");
+
+        ScrollTrigger.create({
+          trigger: ".project_gallery",
+          start: "top top",
+          end: "bottom bottom",
+          pin: ".right_pro",
+        });
+        gsap.utils.toArray(".desktopContentSection").forEach(function (elem) {
+          let headline = elem.querySelector("h1");
+          var color = elem.getAttribute("data-color");
+          var curser = elem.getAttribute("curser-color");
+          console.log(color);
+          ScrollTrigger.create({
+            trigger: headline,
+            scrub: true,
+            onEnter: () =>
+              gsap.to("body", {
+                backgroundColor: color,
+                duration: 1.4,
+              }),
+            // onEnter: () => gsap.to('.cursor', {
+            //   backgroundColor: curser,
+            //   duration: 1.4
+            // }),
+            onEnterBack: () =>
+              gsap.to("body", {
+                backgroundColor: color,
+                duration: 1.4,
+              }),
+            // onEnterBack: () => gsap.to('cursor', {
+            //   backgroundColor: curser,
+            //   duration: 1.4
+            // }),
+          });
+        });
+        //create scrolltrigger for each details section
+        //trigger photo animation when headline of each details section
+        //reaches 80% of window height
+
+        details.forEach((detail, index) => {
+          // var color = detailsfull.getAttribute('data-color');
+          let headline = detail.querySelector("h1");
+          let animation = gsap
+            .timeline()
+            .to(photos[index], {
+              yPercent: 0,
+            })
+            .set(allPhotos[index], {
+              autoAlpha: 0,
+            });
+          ScrollTrigger.create({
+            trigger: headline,
+            // start: "top 100%",
+            // end: "top ",
+            animation: animation,
+            scrub: true,
+            markers: false,
+          });
+        });
+
+        return () => {
+          // optional
+          // custom cleanup code here (runs when it STOPS matching)
+          console.log("mobile");
+        };
+      });
+    </script>
+    <script type="module">
+      import KeenSlider from "https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm";
+
+      const keenSliderActive = document.getElementById("keen-slider-active");
+      const keenSliderCount = document.getElementById("keen-slider-count");
+
+      const keenSlider = new KeenSlider(
+        "#keen-slider",
+        {
+          loop: true,
+          defaultAnimation: {
+            duration: 750,
+          },
+          slides: {
+            origin: "center",
+            perView: 1,
+            spacing: 16,
+          },
+          breakpoints: {
+            "(min-width: 640px)": {
+              slides: {
+                origin: "center",
+                perView: 1.5,
+                spacing: 16,
+              },
+            },
+            "(min-width: 768px)": {
+              slides: {
+                origin: "center",
+                perView: 1.75,
+                spacing: 16,
+              },
+            },
+            "(min-width: 1024px)": {
+              slides: {
+                origin: "center",
+                perView: 3,
+                spacing: 16,
+              },
+            },
+          },
+          created(slider) {
+            slider.slides[slider.track.details.rel].classList.remove(
+              "opacity-40"
+            );
+
+            keenSliderActive.innerText = slider.track.details.rel + 1;
+            keenSliderCount.innerText = slider.slides.length;
+          },
+          slideChanged(slider) {
+            slider.slides.forEach((slide) => slide.classList.add("opacity-40"));
+
+            slider.slides[slider.track.details.rel].classList.remove(
+              "opacity-40"
+            );
+
+            keenSliderActive.innerText = slider.track.details.rel + 1;
+          },
+        },
+        []
+      );
+
+      const keenSliderPrevious = document.getElementById(
+        "keen-slider-previous"
+      );
+      const keenSliderNext = document.getElementById("keen-slider-next");
+
+      keenSliderPrevious.addEventListener("click", () => keenSlider.prev());
+      keenSliderNext.addEventListener("click", () => keenSlider.next());
+    </script>
+    <script>
+      // Wait for DOM to be fully loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize Lenis for smooth scrolling
+
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Get all elements with reveal-type class
+        const splitTypes = document.querySelectorAll(".reveal-type");
+
+        // Apply the animation to each element
+        splitTypes.forEach((char) => {
+          // Get background and foreground colors from data attributes
+          const bg = char.dataset.bgColor;
+          const fg = char.dataset.fgColor;
+
+          // Initialize SplitType
+          const text = new SplitType(char, { types: "chars" });
+
+          // Make sure all characters start with the background color
+          gsap.set(text.chars, { color: bg });
+
+          // Create the animation
+          gsap.to(text.chars, {
+            color: fg,
+            duration: 0.3,
+            stagger: 0.02,
+            scrollTrigger: {
+              trigger: char,
+              start: "top 80%",
+              end: "top 20%",
+              scrub: true,
+              // markers: true, // Uncomment for debugging
+              toggleActions: "play play reverse reverse",
+            },
+          });
+        });
+      });
+    </script>
+    <script>
+      gsap.to(".digit", {
+        top: "-150px",
+        stagger: {
+          amount: 0.25,
+        },
+        delay: 6,
+        duration: 1,
+        ease: "power4.inOut",
+      });
+
+      gsap.from(".loader-1", {
+        width: 0,
+        duration: 6,
+        ease: "power2.inOut",
+      });
+
+      gsap.from(".loader-2", {
+        width: 0,
+        delay: 1.8,
+        duration: 2,
+        ease: "power2.inOut",
+      });
+
+      gsap.to(".loader", {
+        background: "none",
+        delay: 6,
+        duration: 0.1,
+      });
+
+      gsap.to(".loader-1", {
+        rotate: 90,
+        y: -50,
+        duration: 0.5,
+        delay: 6,
+      });
+
+      gsap.to(
+        ".loader-2",
+        {
+          x: -75,
+          y: 75,
+          duration: 0.5,
+        },
+        "<"
+      );
+
+      gsap.to(".loader", {
+        scale: 40,
+        duration: 1,
+        delay: 7,
+        ease: "power2.inOut",
+      });
+
+      gsap.to(".loader", {
+        rotate: 45,
+        y: 500,
+        x: 2000,
+        duration: 1,
+        delay: 7,
+        ease: "power2.inOut",
+      });
+
+      gsap.to(".loading-screen", {
+        opacity: 0,
+        duration: 0.5,
+        delay: 7.5,
+        ease: "power1.inOut",
+      });
+
+      gsap.to("h2", 1.5, {
+        delay: 7,
+        y: 8,
+        ease: "power4.inOut",
+        stagger: {
+          amount: 0.1,
+        },
+      });
+    </script>
+  </body>
+</html>
